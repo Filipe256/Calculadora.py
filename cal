@@ -1,0 +1,43 @@
+def calculate():
+    operação = input('''Por favor, escolha um tipo de operação matemática:
++ para adição
+- para subtração
+* para multiplicação
+/ para divisão''')
+    
+
+    A = int(input("Digite um número qualquer"))
+    B = int(input("DIgite outro número qualquer"))
+
+    if operação == '+':
+        print ('{} + {} ='.format(A,B))
+        print (A+B)
+    elif operação == '-':
+        print ('{} - {} ='.format(A,B))
+        print (A-B)
+    elif operação == '*':
+        print ('{} * {} ='.format(A,B))
+        print (A*B)
+    elif operação == '/':
+        print ('{} / {} ='.format(A,B))
+        print (A/B)
+    else: ('Sua operação não foi encontrada')
+    
+    again()
+    
+
+# Esta função é para perguntar o usuário se ele quer iniciar novamente a calculadora
+def again():
+    calc_again = input('''você quer calcula novamente? Por favor digite s para sim e n pra não''')
+
+    if calc_again.upper()=='S':
+        calculate()
+
+    elif calc_again.upper()== 'N':
+        print ('Até a próxima')
+
+    else:
+        print('Adeus')
+        again()
+
+calculate()
